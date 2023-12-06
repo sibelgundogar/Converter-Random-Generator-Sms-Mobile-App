@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llvWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RandomGeneratorActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6">
+
+        <soup.neumorphism.NeumorphButton
+            android:id="@+id/btnBackRnd"
+            style="@style/Widget.Neumorph.Button"
+            android:layout_width="108dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="4dp"
+            android:text="Back"
+            app:layout_constraintEnd_toStartOf="@+id/txtConverter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_backgroundColor="@color/pink" />
+
+        <soup.neumorphism.NeumorphTextView
+            android:id="@+id/txtConverter3"
+            style="@style/Widget.Neumorph.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Random Generator"
+            android:textColor="@color/pink"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95"
+            app:neumorph_shadowColorDark="#FF0058" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Adet" />
+
+            <EditText
+                android:id="@+id/etProgCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="70dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Maks" />
+
+            <EditText
+                android:id="@+id/etProgMax"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="70dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_weight="3"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Min" />
+
+            <EditText
+                android:id="@+id/etProgMin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="70dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_horizontal">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/btnCalculate"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:text="Hesapla"
+                app:neumorph_backgroundColor="@color/pink" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:id="@+id/llvProgBars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

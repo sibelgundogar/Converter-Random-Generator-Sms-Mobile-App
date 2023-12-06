@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtStudentName"
+        android:layout_width="205dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Sibel Gündoğar"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnConverter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Sibel Gündoğar" />
+
+    <TextView
+        android:id="@+id/txtStudentNumber"
+        android:layout_width="233dp"
+        android:layout_height="29dp"
+        android:fontFamily="sans-serif-black"
+        android:text="202013709059"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txtStudentName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.584"
+        tools:text="202013709059" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnRandomGenerator"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="RANDOM GENERATOR"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSms"
+        app:layout_constraintEnd_toEndOf="@+id/btnConverter"
+        app:layout_constraintStart_toStartOf="@+id/btnConverter"
+        app:neumorph_backgroundColor="#FF7FAC"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shapeType="flat"
+        tools:text="RANDOM GENERATOR" />
+
+        <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnSms"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="SMS"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnRandomGenerator"
+        app:layout_constraintStart_toStartOf="@+id/btnRandomGenerator"
+        app:neumorph_backgroundColor="#A97CFA"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shapeType="flat"
+        tools:text="SMS" />
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnConverter"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="CONVERTER"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRandomGenerator"
+        app:layout_constraintEnd_toEndOf="@+id/txtStudentName"
+        app:layout_constraintStart_toStartOf="@+id/txtStudentName"
+        app:neumorph_backgroundColor="#FF9F81" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

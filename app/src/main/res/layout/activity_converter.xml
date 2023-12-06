@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llvWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConverterActivity" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6">
+
+
+        <soup.neumorphism.NeumorphButton
+            style="@style/Widget.Neumorph.Button"
+            android:id="@+id/btnBackConverter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Back"
+            app:layout_constraintEnd_toStartOf="@+id/txtConverter"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:neumorph_backgroundColor="@color/orange" />
+
+        <soup.neumorphism.NeumorphTextView
+            android:id="@+id/txtConverter"
+            style="@style/Widget.Neumorph.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Converter"
+            android:textColor="@color/orange"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.733"
+            app:neumorph_shadowColorDark="#FF1100"
+            tools:text="Converter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/llvItemWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="40dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="40dp"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:id="@+id/llvDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:text="Decimal"
+                        android:textAlignment="viewStart"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etDecimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:inputType="number"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries='@array/decimal_array'
+                    android:textAlignment="viewStart" />
+
+                <TextView
+                    android:id="@+id/txtDecRes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Sonuç"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llvByte"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:text="Megabyte"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etByte"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spByte"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/byte_array" />
+
+                <TextView
+                    android:id="@+id/txtByteRes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Sonuç"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llvCelcius"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/customborder"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:text="Celcius"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/etCelcius"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rgrpCelc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtnFahr"
+                        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fahrenayt"
+                        app:buttonTint="@color/orange" />
+
+                    <RadioButton
+                        android:id="@+id/rbtnKelvin"
+                        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kelvin"
+                        app:buttonTint="@color/orange" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtCelRes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Sonuç"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

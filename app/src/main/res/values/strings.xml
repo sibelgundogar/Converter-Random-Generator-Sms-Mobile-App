@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application_5</string>
+    <string-array name="decimal_array">
+        <item>Binary</item>
+        <item>Octal</item>
+        <item>Hexadecimal</item>
+    </string-array>
+
+    <string-array name="byte_array">
+        <item>Kilobyte</item>
+        <item>Byte</item>
+        <item>Kibibyte</item>
+        <item>Bit</item>
+    </string-array>
+</resources>
