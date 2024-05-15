@@ -7,3 +7,9 @@ In the application, navigation to the converter, random generator, and SMS pages
 ### Youtube Video
 If you want to see how the application works, you can find it at the following YouTube link:
 https://www.youtube.com/watch?v=SAnNIz9fdO8
+
+### Screenshots of the application
+![](images/main.png)
+![](images/converter.png)
+![](images/random.png)
+![](images/sms.png)
