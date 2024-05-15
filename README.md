@@ -12,4 +12,4 @@ https://www.youtube.com/watch?v=SAnNIz9fdO8
 ![](images/main.png)
 ![](images/converter.png)
 ![](images/random.png)
-![](images/sms.png)
+![](images/sendSms.png)
